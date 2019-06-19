@@ -1,17 +1,42 @@
-function carregar(){
-var msg = window.document.getElementById("msg");
-var img = window.document.getElementById("imagem");
-var data = new Date();
-var hora = data.getHours();
-msg.innerHTML = `Agora são ${hora} horas`;
-if(hora >=0 && hora <12){
-    img.src="img/manha.jpg"
-    document.body.style.background="#fe9908"
-}else if(hora>=12 && hora <=18){
-    img.src="img/tarde.jpg"
-    document.body.style.background="#ffba83"
-}else{
-    img.src="img/noite.jpg"
-    document.body.style.background="#013374"
-}
+function contar() {
+
+    var inicio = document.getElementById("inicio");
+    var fim = document.getElementById("fim");
+    var passo = document.getElementById("passo");
+    var res = document.getElementById("res");
+    var c;
+
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert("falta dados");
+        res.innerHTML = "Impossivel contar."
+    } else {
+        res.innerHTML = "Contando...";
+        var i = Number(inicio.value);
+        var f = Number(fim.value);
+        var p = Number(passo.value);
+        
+        if(p <= 0){
+            window.alert("Passo inválido!!! Será considerado o PASSO 1");
+            p = 1;
+        }
+
+        if (inicio < fim) {
+
+            for (c = i; c <= f; c += p) {
+
+                res.innerHTML += `${c} <br> \u{1F603}	`;
+            }
+            // Unicode no JS é u\
+        } else {
+            for (c = i; c >= f; c -= p) {
+
+                res.innerHTML += `${c} <br> \u{1F603}	`;
+
+            }
+        }
+        
+        res.innerHTML += `${c} <br> \u{1F603}	`;
+
+    }
+
 }

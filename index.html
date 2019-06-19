@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Verificador de Hora</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
-<body onload="carregar()">
+<body >
     <header>
-        <h1>Hora do dia</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
-        <div id="msg">
-            Aqui vai aparecer a mensagem...
+        <div id="dados">
+            Início:
+            <input type="number" name="inicio" id="inicio">
+            <br>
+            Fim:
+            <input type="number" name="fim" id="fim">
+            <br>
+            Passo:
+            <input type="number" name="passo" id="passo">
+            <br>
+            <input type="submit" name="contar" value="Contar" onclick="contar()">
+
+
+          
         </div>
-        <div id="foto">
-            <img id="imagem" class="imagem" src="img/manha.jpg" alt="imagem do dia" width="50%">
+        <div id="res">
+            
         </div>
 
     </section>
@@ -26,7 +38,9 @@
         <p>&copy; Eduarda Rosa</p>
 
     </footer>
-    <script src="script/script.js"></script>
+    <script src="script/script.js">
+    
+    </script>
 
 </body>
 
