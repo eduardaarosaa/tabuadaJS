@@ -5,34 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Tabuada</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 
 <body >
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div id="dados">
-            Início:
-            <input type="number" name="inicio" id="inicio">
-            <br>
-            Fim:
-            <input type="number" name="fim" id="fim">
-            <br>
-            Passo:
-            <input type="number" name="passo" id="passo">
-            <br>
-            <input type="submit" name="contar" value="Contar" onclick="contar()">
-
-
-          
+        
+            <p>Número:<input type="number" id="txt1">
+            <input type="submit" value="Gerar tabuada" onclick="tabuada()"></p>
         </div>
-        <div id="res">
-            
-        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10">
 
+            </select>
+        </div>
+        
     </section>
     <footer>
         <p>&copy; Eduarda Rosa</p>
