@@ -10,32 +10,32 @@ function contar() {
         window.alert("falta dados");
         res.innerHTML = "Impossivel contar."
     } else {
-        res.innerHTML = "Contando...";
+        res.innerHTML = "Contando...<br>";
         var i = Number(inicio.value);
         var f = Number(fim.value);
         var p = Number(passo.value);
-        
+
         if(p <= 0){
             window.alert("Passo inválido!!! Será considerado o PASSO 1");
             p = 1;
         }
 
-        if (inicio < fim) {
+        if (i < f) {
 
             for (c = i; c <= f; c += p) {
 
-                res.innerHTML += `${c} <br> \u{1F603}	`;
+                res.innerHTML += `${c}  \u{1F603}	`;
             }
             // Unicode no JS é u\
         } else {
             for (c = i; c >= f; c -= p) {
 
-                res.innerHTML += `${c} <br> \u{1F603}	`;
+                res.innerHTML += `${c} \u{1F603}	`;
 
             }
         }
         
-        res.innerHTML += `${c} <br> \u{1F603}	`;
+        res.innerHTML += `${c} \u{1F603}	`;
 
     }
 
